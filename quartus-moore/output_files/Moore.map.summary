@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon Jul 28 22:13:46 2025
+Analysis & Synthesis Status : Successful - Mon Jul 28 22:41:03 2025
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : Moore
 Top-level Entity Name : Moore
 Family : MAX 10
-Total logic elements : 4
-    Total combinational functions : 4
-    Dedicated logic registers : 4
-Total registers : 4
+Total logic elements : 9
+    Total combinational functions : 9
+    Dedicated logic registers : 5
+Total registers : 5
 Total pins : 46
 Total virtual pins : 0
 Total memory bits : 0
