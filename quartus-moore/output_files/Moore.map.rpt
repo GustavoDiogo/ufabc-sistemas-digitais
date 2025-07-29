@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Moore
-Fri Jul 25 20:36:58 2025
+Mon Jul 28 22:13:46 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -45,7 +45,7 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jul 25 20:36:58 2025           ;
+; Analysis & Synthesis Status        ; Successful - Mon Jul 28 22:13:46 2025           ;
 ; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                      ; Moore                                           ;
 ; Top-level Entity Name              ; Moore                                           ;
@@ -54,7 +54,7 @@ on the Quartus Prime software download page.
 ;     Total combinational functions  ; 4                                               ;
 ;     Dedicated logic registers      ; 4                                               ;
 ; Total registers                    ; 4                                               ;
-; Total pins                         ; 4                                               ;
+; Total pins                         ; 46                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -155,7 +155,7 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -167,45 +167,45 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; Moore.vhd                        ; yes             ; User VHDL File  ; /home/gustavo/Workspace/ufabc-sistemas-digitais/quartus-moore/Moore.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; Moore.vhd                        ; yes             ; User VHDL File  ; /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 4           ;
-;                                             ;             ;
-; Total combinational functions               ; 4           ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 0           ;
-;     -- 3 input functions                    ; 1           ;
-;     -- <=2 input functions                  ; 3           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 4           ;
-;     -- arithmetic mode                      ; 0           ;
-;                                             ;             ;
-; Total registers                             ; 4           ;
-;     -- Dedicated logic registers            ; 4           ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 4           ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; SW[0]~input ;
-; Maximum fan-out                             ; 4           ;
-; Total fan-out                               ; 26          ;
-; Average fan-out                             ; 1.62        ;
-+---------------------------------------------+-------------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 4        ;
+;                                             ;          ;
+; Total combinational functions               ; 4        ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 0        ;
+;     -- 3 input functions                    ; 1        ;
+;     -- <=2 input functions                  ; 3        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 4        ;
+;     -- arithmetic mode                      ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 4        ;
+;     -- Dedicated logic registers            ; 4        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 46       ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; state.S4 ;
+; Maximum fan-out                             ; 13       ;
+; Total fan-out                               ; 80       ;
+; Average fan-out                             ; 0.80     ;
++---------------------------------------------+----------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -213,7 +213,7 @@ on the Quartus Prime software download page.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |Moore                     ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 4    ; 0            ; 0          ; |Moore              ; Moore       ; work         ;
+; |Moore                     ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 46   ; 0            ; 0          ; |Moore              ; Moore       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -262,16 +262,18 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 4                           ;
+; boundary_port         ; 46                          ;
 ; cycloneiii_ff         ; 4                           ;
 ;     CLR               ; 4                           ;
-; cycloneiii_lcell_comb ; 4                           ;
-;     normal            ; 4                           ;
+; cycloneiii_lcell_comb ; 6                           ;
+;     normal            ; 6                           ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 3                           ;
 ;         3 data inputs ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.73                        ;
+; Average LUT depth     ; 0.77                        ;
 +-----------------------+-----------------------------+
 
 
@@ -280,7 +282,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -290,14 +292,45 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Fri Jul 25 20:36:27 2025
+    Info: Processing started: Mon Jul 28 22:13:38 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Moore -c Moore
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file Moore.vhd
-    Info (12022): Found design unit 1: Moore-behavior File: /home/gustavo/Workspace/ufabc-sistemas-digitais/quartus-moore/Moore.vhd Line: 13
-    Info (12023): Found entity 1: Moore File: /home/gustavo/Workspace/ufabc-sistemas-digitais/quartus-moore/Moore.vhd Line: 4
+    Info (12022): Found design unit 1: Moore-behavior File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 13
+    Info (12023): Found entity 1: Moore File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 4
 Info (12127): Elaborating entity "Moore" for the top level hierarchy
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX0[4]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX0[3]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX0[2]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
+    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais-old/quartus-moore/Moore.vhd Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 149 assignments for entity "DE10_LITE" -- entity does not exist in design
@@ -452,14 +485,14 @@ Warning (20013): Ignored 149 assignments for entity "DE10_LITE" -- entity does n
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity DE10_LITE was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 8 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 1 output pins
+    Info (21059): Implemented 43 output pins
     Info (21061): Implemented 4 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 151 warnings
-    Info: Peak virtual memory: 449 megabytes
-    Info: Processing ended: Fri Jul 25 20:36:58 2025
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:01:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 182 warnings
+    Info: Peak virtual memory: 423 megabytes
+    Info: Processing ended: Mon Jul 28 22:13:46 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 
