@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Mealy
-Mon Jul 28 22:00:29 2025
+Mon Jul 28 22:44:03 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -14,11 +14,10 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |Mealy|state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -45,15 +44,15 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jul 28 22:00:29 2025           ;
+; Analysis & Synthesis Status        ; Successful - Mon Jul 28 22:44:03 2025           ;
 ; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                      ; Mealy                                           ;
 ; Top-level Entity Name              ; Mealy                                           ;
 ; Family                             ; MAX 10                                          ;
-; Total logic elements               ; 4                                               ;
-;     Total combinational functions  ; 4                                               ;
-;     Dedicated logic registers      ; 3                                               ;
-; Total registers                    ; 3                                               ;
+; Total logic elements               ; 9                                               ;
+;     Total combinational functions  ; 9                                               ;
+;     Dedicated logic registers      ; 4                                               ;
+; Total registers                    ; 4                                               ;
 ; Total pins                         ; 46                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -181,20 +180,20 @@ on the Quartus Prime software download page.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 4            ;
+; Estimated Total logic elements              ; 9            ;
 ;                                             ;              ;
-; Total combinational functions               ; 4            ;
+; Total combinational functions               ; 9            ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 0            ;
-;     -- 3 input functions                    ; 1            ;
-;     -- <=2 input functions                  ; 3            ;
+;     -- 4 input functions                    ; 1            ;
+;     -- 3 input functions                    ; 4            ;
+;     -- <=2 input functions                  ; 4            ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 4            ;
+;     -- normal mode                          ; 9            ;
 ;     -- arithmetic mode                      ; 0            ;
 ;                                             ;              ;
-; Total registers                             ; 3            ;
-;     -- Dedicated logic registers            ; 3            ;
+; Total registers                             ; 4            ;
+;     -- Dedicated logic registers            ; 4            ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 46           ;
@@ -202,9 +201,9 @@ on the Quartus Prime software download page.
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; z_internal~0 ;
-; Maximum fan-out                             ; 13           ;
-; Total fan-out                               ; 77           ;
-; Average fan-out                             ; 0.78         ;
+; Maximum fan-out                             ; 17           ;
+; Total fan-out                               ; 105          ;
+; Average fan-out                             ; 1.00         ;
 +---------------------------------------------+--------------+
 
 
@@ -213,7 +212,7 @@ on the Quartus Prime software download page.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |Mealy                     ; 4 (4)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 46   ; 0            ; 0          ; |Mealy              ; Mealy       ; work         ;
+; |Mealy                     ; 9 (9)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 46   ; 0            ; 0          ; |Mealy              ; Mealy       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -231,25 +230,15 @@ Encoding Type:  One-Hot
 +----------+----------+----------+----------+----------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; state.S1                              ; Lost fanout        ;
-; Total Number of Removed Registers = 1 ;                    ;
-+---------------------------------------+--------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -262,17 +251,18 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 46                          ;
-; cycloneiii_ff         ; 3                           ;
-;     CLR               ; 3                           ;
-; cycloneiii_lcell_comb ; 6                           ;
-;     normal            ; 6                           ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 1                           ;
+; cycloneiii_ff         ; 4                           ;
+;     CLR               ; 4                           ;
+; cycloneiii_lcell_comb ; 13                          ;
+;     normal            ; 13                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.08                        ;
+; Average LUT depth     ; 1.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -291,7 +281,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Mon Jul 28 22:00:20 2025
+    Info: Processing started: Mon Jul 28 22:43:55 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Mealy -c Mealy
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -318,30 +308,19 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX3[2]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
     Warning (13410): Pin "HEX3[1]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
     Warning (13410): Pin "HEX2[6]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
     Warning (13410): Pin "HEX1[1]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
-    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
-    Warning (13410): Pin "HEX0[4]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
-    Warning (13410): Pin "HEX0[3]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
-    Warning (13410): Pin "HEX0[2]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
-    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
-    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: /home/ufabc/Workspace/ufabc-sistemas-digitais/quartus-mealy/Mealy.vhd Line: 9
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 55 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 43 output pins
-    Info (21061): Implemented 4 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
+    Info (21061): Implemented 9 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
     Info: Peak virtual memory: 429 megabytes
-    Info: Processing ended: Mon Jul 28 22:00:29 2025
-    Info: Elapsed time: 00:00:09
+    Info: Processing ended: Mon Jul 28 22:44:03 2025
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:18
 
 

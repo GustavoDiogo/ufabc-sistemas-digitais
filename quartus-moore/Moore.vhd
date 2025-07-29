@@ -102,7 +102,7 @@ begin
                 when S1 => HEX0 <= char_to_7seg('1');
                 when S2 => HEX0 <= char_to_7seg('2');
                 when S3 => HEX0 <= char_to_7seg('3');
-                when S4 => HEX0 <= char_to_7seg('4'); -- opcional: pode ser apagado também
+                when S4 => HEX0 <= char_to_7seg('4');
             end case;
         end if;
     end process;
