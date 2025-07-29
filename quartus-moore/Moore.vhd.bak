@@ -1,0 +1,74 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Moore is
+    port (
+        clk     : in  std_logic;
+        reset   : in  std_logic;
+        x       : in  std_logic;
+        z       : out std_logic
+    );
+end Moore;
+
+architecture behavior of Moore is
+    type state_type is (S0, S1, S2, S3, S4);
+    signal state, next_state : state_type;
+begin
+    -- Process 1: Estado sequencial
+    process (clk, reset)
+    begin
+        if reset = '1' then
+            state <= S0;
+        elsif rising_edge(clk) then
+            state <= next_state;
+        end if;
+    end process;
+
+    -- Process 2: Lógica de transição de estados
+    process (state, x)
+    begin
+        case state is
+            when S0 =>
+                if x = '1' then
+                    next_state <= S1;
+                else
+                    next_state <= S0;
+                end if;
+            when S1 =>
+                if x = '1' then
+                    next_state <= S2;
+                else
+                    next_state <= S0;
+                end if;
+            when S2 =>
+                if x = '0' then
+                    next_state <= S3;
+                else
+                    next_state <= S2;
+                end if;
+            when S3 =>
+                if x = '1' then
+                    next_state <= S4;
+                else
+                    next_state <= S0;
+                end if;
+            when S4 =>
+                if x = '1' then
+                    next_state <= S2;
+                else
+                    next_state <= S0;
+                end if;
+        end case;
+    end process;
+
+    -- Process 3: Lógica de saída (Moore depende do estado apenas)
+    process (state)
+    begin
+        case state is
+            when S4 =>
+                z <= '1';
+            when others =>
+                z <= '0';
+        end case;
+    end process;
+end behavior;

@@ -1,0 +1,11 @@
+|Moore
+KEY[0] => state~1.DATAIN
+KEY[1] => state~3.DATAIN
+SW[0] => next_state.S1.DATAB
+SW[0] => next_state.S2.DATAA
+SW[0] => next_state.S4.DATAB
+SW[0] => Selector0.IN1
+SW[0] => next_state.S3.DATAB
+LEDR[0] <= LEDR[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
