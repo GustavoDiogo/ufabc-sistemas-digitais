@@ -1,5 +1,7 @@
+
 library ieee;
 use ieee.std_logic_1164.all;
+use std.env.all;
 
 -- Entidade do testbench (sem portas, pois é só para simulação)
 entity tb_seq_rec_mealy is
@@ -64,9 +66,9 @@ begin
         x <= '0'; wait for clk_period;
         x <= '1'; wait for clk_period;
 
-        -- Encerramos a simulação
+        -- Encerramos a simulação de forma limpa
         wait for 50 ns;
-        assert false report "Fim da simulação." severity failure;
+        stop;
     end process;
 
 end test;

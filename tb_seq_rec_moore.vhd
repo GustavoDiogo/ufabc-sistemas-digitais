@@ -1,5 +1,7 @@
+
 library ieee;
 use ieee.std_logic_1164.all;
+use std.env.all;
 
 -- Entidade do testbench (não tem portas pois só serve para testar)
 entity tb_seq_rec_moore is
@@ -52,24 +54,20 @@ begin
         reset <= '0';
 
         -- A partir daqui aplicamos a sequência de entrada bit a bit
-
-        -- Enviando a sequência: 1, 1, 0, 1 → Deve ativar a saída 'z'
         x <= '1'; wait for clk_period;
         x <= '1'; wait for clk_period;
         x <= '0'; wait for clk_period;
         x <= '1'; wait for clk_period;
 
-        -- Adicionamos algumas sequências extras para validar outras transições
+        -- Sequência extra para validação
         x <= '0'; wait for clk_period;
         x <= '1'; wait for clk_period;
         x <= '0'; wait for clk_period;
         x <= '1'; wait for clk_period;
 
-        -- Encerramos a simulação com uma pausa
+        -- Encerramos a simulação de forma limpa
         wait for 50 ns;
-
-        -- Comando que para a simulação com uma mensagem
-        assert false report "Fim da simulação." severity failure;
+        stop;
     end process;
 
 end test;

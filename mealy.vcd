@@ -1,5 +1,5 @@
 $date
-  Wed Jul 23 23:24:52 2025
+  Fri Aug  1 20:27:03 2025
 $end
 $version
   GHDL v0
@@ -9,7 +9,11 @@ $timescale
 $end
 $scope module standard $end
 $upscope $end
+$scope module textio $end
+$upscope $end
 $scope module std_logic_1164 $end
+$upscope $end
+$scope module env $end
 $upscope $end
 $scope module tb_seq_rec_mealy $end
 $var reg 1 ! clk $end
